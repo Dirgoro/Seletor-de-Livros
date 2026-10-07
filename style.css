@@ -1,0 +1,122 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f0f4f8; /* Cor de fundo suave para descanso visual */
+  color: #2d3748;
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center;     /* Centraliza verticalmente */
+  min-height: 100vh;       /* Ocupa 100% da altura da tela */
+  padding: 20px;
+}
+
+.container {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1); /* Efeito de elevação visual */
+  max-width: 500px;
+  width: 100%;
+  padding: 30px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+header h1 {
+  color: #1a365d;
+  font-size: 1.6rem;
+  margin-bottom: 8px;
+}
+
+header p {
+  color: #718096;
+  font-size: 0.95rem;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #2b6cb0;
+}
+
+select {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #4a5568;
+  background-color: #f8fafc;
+  transition: border-color 0.3s ease;
+}
+
+select:focus {
+  outline: none;
+  border-color: #3182ce;
+}
+
+.btn-recomendar {
+  width: 100%;
+  padding: 14px;
+  background-color: #3182ce;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.05rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.btn-recomendar:hover {
+  background-color: #2b6cb0;
+}
+
+.btn-recomendar:active {
+  transform: scale(0.98);
+}
+
+.resultado-card {
+  margin-top: 25px;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #ebf8ff;
+  border-left: 5px solid #3182ce;
+  display: none; 
+}
+
+.resultado-card h2 {
+  font-size: 1.2rem;
+  color: #2c5282;
+  margin-bottom: 6px;
+}
+
+.resultado-card h3 {
+  font-size: 1.1rem;
+  color: #2b6cb0;
+  margin-bottom: 8px;
+}
+
+.resultado-card p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: #4a5568;
+}
+
+.alerta {
+  background-color: #fff5f5;
+  border-left-color: #e53e3e;
+  color: #c53030;
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <!-- Configuração de codificação de caracteres para suporte a acentos do português -->
+  <meta charset="UTF-8">
+  
+  <!-- Configuração de viewport para garantir a responsividade em celulares e tablets -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Título da página exibido na aba do navegador -->
+  <title>Recomendador de Livros - Biblioteca Escolar</title>
+  
+  <!-- Importação da folha de estilos (CSS) -->
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Importação do arquivo de lógica (JavaScript) com atributo 'defer' para carregar após o HTML -->
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- Conteiner principal para centralização e organização visual do aplicativo -->
+  <div class="container">
+    
+    <!-- Cabeçalho com o título e a apresentação do projeto -->
+    <header>
+      <h1>📚 Recomendador da Biblioteca</h1>
+      <p>Descubra sua próxima leitura por meio do nosso algoritmo de sugestão escolar!</p>
+    </header>
+
+    <!-- Seção principal onde o usuário interage com o formulário -->
+    <main>
+      
+      <!-- Bloco de entrada 1: Seleção de Gênero Literário -->
+      <div class="form-group">
+        <label for="genero">1. Qual é o gênero literário que você prefere hoje?</label>
+        <select id="genero" name="genero">
+          <option value="">-- Selecione um gênero --</option>
+          <option value="ficcao">Ficção Científica e Tecnologia</option>
+          <option value="misterio">Mistério e Suspense</option>
+          <option value="aventura">Aventura e Fantasia</option>
+          <option value="hq">HQ / Mangá</option>
+        </select>
+      </div>
+
+      <!-- Bloco de entrada 2: Seleção do Tempo de Leitura -->
+      <div class="form-group">
+        <label for="tempo">2. Quanto tempo você tem disponível para ler?</label>
+        <select id="tempo" name="tempo">
+          <option value="">-- Selecione o tempo de leitura --</option>
+          <option value="curto">Leitura Rápida (Poucas páginas / HQ)</option>
+          <option value="medio">Leitura Média (Alguns capítulos por dia)</option>
+          <option value="longo">Leitura Aprofundada (Livros mais extensos)</option>
+        </select>
+      </div>
+
+      <!-- Botão de ação que aciona a função gerarRecomendacao() no JavaScript ao ser clicado -->
+      <button type="button" id="btn-recomendar" class="btn-recomendar" onclick="gerarRecomendacao()">
+        🤖 Gerar Recomendação
+      </button>
+
+      <!-- Cartão de resultado: exibe a sugestão do livro. 'aria-live="polite"' melhora a acessibilidade para leitores de tela -->
+      <section id="resultado" class="resultado-card" aria-live="polite">
+        <h2 id="titulo-resultado">Recomendação Encontrada:</h2>
+        <h3 id="livro-nome">--</h3>
+        <p id="livro-descricao">--</p>
+      </section>
+
+    </main>
+
+  </div>
+
+</body>
+</html>
